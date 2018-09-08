@@ -1,0 +1,3 @@
+[submodule "lib/ioc"]
+	path = lib/ioc
+	url = https://github.com/ylysenkova/ioc
