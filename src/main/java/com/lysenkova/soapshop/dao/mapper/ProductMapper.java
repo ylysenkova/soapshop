@@ -14,9 +14,7 @@ public class ProductMapper {
         product.setName(resultSet.getString("name"));
         product.setPrice(resultSet.getDouble("price"));
         product.setImgRef(resultSet.getString("image_ref"));
-        Timestamp timestampForDate = resultSet.getTimestamp("date");
-        LocalDateTime localDateTime = timestampForDate.toLocalDateTime();
-        product.setLocalDateTime(localDateTime);
+        product.setLocalDateTime(resultSet.getObject("date", LocalDateTime.class));
         return product;
     }
 }

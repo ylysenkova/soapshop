@@ -17,8 +17,8 @@ import java.util.List;
 
 @Repository
 public class JdbcUserDao implements UserDao {
-    private final static String GET_ALL_USERS_SQL = "select id, login, password, salt from users";
-    private final static String GET_USER_BY_LOGIN = "select id, login, password, salt from users where login = ?";
+    private final static String GET_ALL_USERS_SQL = "select id, login, password, salt from soapshop.users";
+    private final static String GET_USER_BY_LOGIN = "select id, login, password, salt from soapshop.users where login = ?";
 
     private final UserMapper USER_MAPPER = new UserMapper();
     private final Logger LOGGER = LoggerFactory.getLogger(getClass());

@@ -15,8 +15,8 @@ import java.util.List;
 
 @Repository
 public class JdbcProductDao implements ProductDao {
-    private final static String GET_ALL_SQL = "select id, name, price, image_ref, date from products";
-    private final static String ADD_PRODUCT_SQL = "insert into products (name, price, image_ref) values (?, ?, ?)";
+    private final static String GET_ALL_SQL = "select id, name, price, image_ref, date from soapshop.products";
+    private final static String ADD_PRODUCT_SQL = "insert into soapshop.products (name, price, image_ref) values (?, ?, ?)";
 
     private final ProductMapper PRODUCT_MAPPER = new ProductMapper();
     private final Logger LOGGER = LoggerFactory.getLogger(getClass());
