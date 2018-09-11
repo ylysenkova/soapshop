@@ -1,1 +1,1 @@
-web: java -jar target/soap-shop-1.0-SNAPSHOT.jar -Dserver.port=5000
+web: java $JAVA_OPTS -jar target/soap-shop-1.0-SNAPSHOT.jar
