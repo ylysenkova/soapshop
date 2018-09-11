@@ -1,2 +1,2 @@
-web: java $JAVA_OPTS -Dspring.profiles.active='heroku' -jar target/soap-shop-1.0-SNAPSHOT.jar
+web: java %JAVA_OPTS% -Dspring.profiles.active='heroku' -jar target\dependency\webapp-runner.jar --port %PORT% target\*.war
 release: ./mvnw liquibase:update
