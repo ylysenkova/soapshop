@@ -32,7 +32,7 @@ public class Starter {
         context.addFilter(new FilterHolder(new LoginFilter()), "/*", EnumSet.of(DispatcherType.FORWARD, DispatcherType.REQUEST));
 
 
-        Server server = new Server(8080);
+        Server server = new Server(5000);
         server.setHandler(context);
 
         server.start();
