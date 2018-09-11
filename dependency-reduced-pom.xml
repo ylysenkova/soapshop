@@ -19,7 +19,9 @@
         <artifactId>liquibase-maven-plugin</artifactId>
         <configuration>
           <changeLogFile>src/main/resources/db/changelog/db.changelog-master.yaml</changeLogFile>
-          <url>${env.JDBC_DATABASE_URL}</url>
+          <url>jdbc:postgresql://ec2-54-163-245-44.compute-1.amazonaws.com:5432/daffsrrmqifl7m?sslmode=require</url>
+          <username>imjscwnkzipzyi</username>
+          <password>7228deb13e08f4d0e4c5a9564dffe83d8a865ba7de91ad774870f77359867f88</password>
         </configuration>
       </plugin>
       <plugin>
