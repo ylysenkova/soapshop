@@ -20,17 +20,17 @@
         <!--<property name="username" value="${database.username}" />-->
         <!--<property name="password" value="${database.password}" />-->
     <!--</bean>-->
-<beans profile="heroku">
-    <context:property-placeholder location="classpath:db/heroku.properties" system-properties-mode="OVERRIDE"/>
-    <bean class="java.net.URI" id="dbUrl">
-        <constructor-arg value="#{systemEnvironment['DATABASE_URL']}"/>
-    </bean>
+<!--<beans profile="heroku">-->
+    <!--<context:property-placeholder location="classpath:db/heroku.properties" system-properties-mode="OVERRIDE"/>-->
+    <!--<bean class="java.net.URI" id="dbUrl">-->
+        <!--<constructor-arg value="#{systemEnvironment['DATABASE_URL']}"/>-->
+    <!--</bean>-->
 
     <bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource">
-        <property name="url" value="#{ 'jdbc:postgresql://' + @dbUrl.getHost() + ':' + @dbUrl.getPort() + @dbUrl.getPath() + '?sslmode=require' }"/>
-        <property name="username" value="#{ @dbUrl.getUserInfo().split(':')[0] }"/>
-        <property name="password" value="#{ @dbUrl.getUserInfo().split(':')[1] }"/>
+        <property name="url" value="jdbc:postgresql://ec2-54-163-245-44.compute-1.amazonaws.com:5432/daffsrrmqifl7m?sslmode=require"/>
+        <property name="username" value="imjscwnkzipzyi"/>
+        <property name="password" value="7228deb13e08f4d0e4c5a9564dffe83d8a865ba7de91ad774870f77359867f88"/>
     </bean>
-</beans>
+<!--</beans>-->
 
 </beans>
